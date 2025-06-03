@@ -79,6 +79,24 @@
   object-position: center;
   background-color: #f8f9fa;
 }
+.custom-card{
+  height:120px;
+}
+.img-hover-container {
+          position: relative;
+        }
+        .see-model-overlay {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0, 188, 212, 0.7);
+          opacity: 0;
+          transition: opacity 0.3s;
+          border-radius: 0.375rem 0.375rem 0 0;
+        }
+        .img-hover-container:hover .see-model-overlay {
+          opacity: 1;
+          cursor: pointer;
+        }
 
   </style>
 </head>
@@ -139,25 +157,25 @@
     <h2 class="text-center mb-5">Skills</h2>
     <div class="row text-center">
       <div class="col-md-3 mb-3">
-        <div class="card p-3 hover-effect">
+        <div class="card p-3 hover-effect custom-card">
           <h5>Programming</h5>
           <p>Python, Java, C++, C</p>
         </div>
       </div>
       <div class="col-md-3 mb-3">
-        <div class="card p-3 hover-effect">
+        <div class="card p-3 hover-effect custom-card">
           <h5>ML Libraries</h5>
-          <p>Pandas, NumPy, Scikit-Learn, Matplotlib</p>
+          <p>Pandas, NumPy, Scikit-Learn, Seaborn</p>
         </div>
       </div>
       <div class="col-md-3 mb-3">
-        <div class="card p-3 hover-effect">
+        <div class="card p-3 hover-effect custom-card">
           <h5>Tools</h5>
           <p>Postman, Git, VS Code, MySQL</p>
         </div>
       </div>
       <div class="col-md-3 mb-3">
-        <div class="card p-3 hover-effect">
+        <div class="card p-3 hover-effect custom-card">
           <h5>Cloud</h5>
           <p>Google Colab, AWS (basic)</p>
         </div>
@@ -169,8 +187,13 @@
     <h2 class="text-center mb-5">Projects</h2>
     <div class="row">
       <div class="col-md-4 mb-4">
-        <div class="card hover-effect">
-          <img src="Assets/HPP.png" class="card-img-top large-card-img" alt="Project 1">
+        <div class="card hover-effect position-relative">
+          <div class="img-hover-container position-relative">
+            <img src="Assets/HPP.png" class="card-img-top fixed-card-img" alt="Project 1">
+            <a href="https://house-price-predictor-cuj2mhktwbwhiyk3ckuhrb.streamlit.app/" target="_blank" class="see-model-overlay d-flex justify-content-center align-items-center text-decoration-none">
+              <span class="text-white fw-bold fs-5">See model</span>
+            </a>
+          </div>
           <div class="card-body">
             <h5 class="card-title">House Price Predictor</h5>
             <p class="card-text">A regression-based model using Scikit-Learn to predict housing prices.</p>
@@ -180,13 +203,18 @@
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card hover-effect">
-          <img src="Assets/SPP.png" class="card-img-top fixed-card-img" alt="Project 2">
+        <div class="card hover-effect position-relative">
+          <div class="img-hover-container position-relative">
+        <img src="Assets/SPP.png" class="card-img-top fixed-card-img" alt="Project 2">
+        <a href="https://student-performance-predictor-7v9w6p7j7pscpmwkhzjlvl.streamlit.app/" target="_blank" class="see-model-overlay d-flex justify-content-center align-items-center text-decoration-none">
+          <span class="text-white fw-bold fs-5">See model</span>
+        </a>
+          </div>
           <div class="card-body">
-            <h5 class="card-title">Student Performance Prediction</h5>
-            <p class="card-text">Predicted student performance using ML models.</p>
-            <p><small>Python, Pandas, Scikit-Learn, Seaborn</small></p>
-            <a href="https://github.com/Piyushthourani/Student-Performance-Predictor" class="btn btn-primary btn-sm">GitHub</a>
+        <h5 class="card-title">Student Performance Prediction</h5>
+        <p class="card-text">Predicted student performance using machine learning models and algorithms.</p>
+        <p><small>Python, Pandas, Scikit-Learn, Seaborn</small></p>
+        <a href="https://github.com/Piyushthourani/Student-Performance-Predictor" class="btn btn-primary btn-sm">GitHub</a>
           </div>
         </div>
       </div>
@@ -210,7 +238,7 @@
       <div class="col-md-4 mb-3">
         <div class="card hover-effect">
           <a href="https://internalapp.nptel.ac.in/NOC/NOC25/SEM1/Ecertificates/106/noc25-cs60/Course/NPTEL25CS60S33400007601403037.pdf" target="_blank">
-          <img src="Assets/DataScience.png" class="card-img-top" alt="Certificate 1">
+          <img src="Assets/DataScience.png" class="card-img-top fixed-card-img" alt="Certificate 1">
         </a>
           <div class="card-body">
             <h5 class="card-title">Python for Data Science</h5>
@@ -221,7 +249,7 @@
       <div class="col-md-4 mb-3">
         <div class="card hover-effect">
           <a href="https://www.freecodecamp.org/certification/Piyush2004/responsive-web-design" target="_blank">
-          <img src="Assets/RWD.png" class="card-img-top" alt="Certificate 2">
+          <img src="Assets/RWD.png" class="card-img-top fixed-card-img" alt="Certificate 2">
         </a>
           <div class="card-body">
             <h5 class="card-title">Responsive Web Design</h5>
@@ -232,7 +260,7 @@
       <div class="col-md-4 mb-3">
         <div class="card hover-effect">
           <a href="https://archive.nptel.ac.in/content/noc/NOC23/SEM2/Ecertificates/106/noc23-cs85/Course/NPTEL23CS85S84520029120421524.pdf" target="_blank">
-          <img src="Assets/DSA_Java.png" class="card-img-top" alt="Certificate 3">
+          <img src="Assets/DSA_Java.png" class="card-img-top fixed-card-img" alt="Certificate 3">
         </a>
           <div class="card-body">
             <h5 class="card-title">DSA in Java</h5>
@@ -262,7 +290,7 @@
         <a href="https://www.instagram.com/thourani_piyush04?igsh=MTI0b3Z0ZHR4eWU1Nw==" target="_blank" class="text-white mx-2"><i class="bi bi-instagram fs-5"></i></a>
         <a href="https://www.linkedin.com/in/piyush-thourani-167716254/" target="_blank" class="text-white mx-2"><i class="bi bi-linkedin fs-5"></i></a>
         <a href="https://twitter.com/PiyushThourani" target="_blank" class="text-white mx-2"><i class="bi bi-twitter fs-5"></i></a>
-        <a href="thouranipiyush@gmail.com" class="text-white mx-2"><i class="bi bi-envelope fs-5"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thouranipiyush@gmail.com" class="text-white mx-2"><i class="bi bi-envelope fs-5"></i></a>
       </div>
 
       <div class="col-md-4 d-none d-md-block">
